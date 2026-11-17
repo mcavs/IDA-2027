@@ -9,7 +9,7 @@ This repository provides the complete reproducibility artifact, raw experimental
 
 ---
 
-## 📌 Executive Summary of Findings
+## Executive Summary of Findings
 
 In high-stakes decision-making and automated machine learning (AutoML), practitioners conventionally select a single top-performing model and generate explainability profiles (e.g., Partial Dependence Plots) solely from this empirical risk minimizer. However, when multiple competing models achieve near-optimal predictive loss—the **Rashomon effect**—relying on a single model introduces acute **explanation disagreement** and uncertainty.
 
@@ -25,19 +25,23 @@ In high-stakes decision-making and automated machine learning (AutoML), practiti
 
 ---
 
-## 📊 Key Figures and Results
+## Key Figures and Results
 
 ### Figure 1: Multi-Panel Mean Deviation from Ground Truth across Rashomon Thresholds
 Comparison of Mean Deviation from Ground Truth ($\mathrm{MD}(\mathrm{GT})$) across all four Rashomon thresholds ($\varepsilon \in \{0.01, 0.05, 0.10, 0.20\}$) across all 27 synthetic benchmark scenarios ($3\text{ setups} \times 9\text{ noise variance levels}$, $n=1{,}500$, 160 base models, 2880s compute budget per scenario). The solid grey line indicates the conventional single best model baseline (B1).
 
-![Figure 1: Mean Deviation across Rashomon Thresholds](figures/combined_md_all_epsilons.png)
+<p align="center">
+  <img src="figures/combined_md_all_epsilons.png" alt="Figure 1: Mean Deviation across Rashomon Thresholds" width="85%">
+</p>
 
 ---
 
 ### Figure 2: Critical Distance Diagram for Post-Hoc Nemenyi Test
 Post-hoc Nemenyi test on Mean Deviation from Ground Truth across all 36 benchmark conditions ($\alpha=0.05, \mathrm{CD}=1.75$). Lower average rank indicates closer alignment with ground truth. Thick horizontal bars connect methods whose performance differences do not exceed the critical distance threshold. All aggregation strategies significantly outperform the single best model baseline (B1, average rank 7.58).
 
-![Figure 2: Nemenyi Critical Distance Diagram](figures/nemenyi_cd_diagram.png)
+<p align="center">
+  <img src="figures/nemenyi_cd_diagram.png" alt="Figure 2: Nemenyi Critical Distance Diagram" width="85%">
+</p>
 
 ---
 
@@ -85,7 +89,7 @@ Mean Deviation from Ground Truth across Rashomon thresholds $\varepsilon \in \{0
 
 ---
 
-## 📂 Repository Structure
+## Repository Structure
 
 ```
 ├── scripts/                        # Source code and execution scripts
@@ -117,7 +121,7 @@ Mean Deviation from Ground Truth across Rashomon thresholds $\varepsilon \in \{0
 
 ---
 
-## 🛠️ Reproducibility Guide
+## Reproducibility Guide
 
 ### 1. Environment Setup
 
